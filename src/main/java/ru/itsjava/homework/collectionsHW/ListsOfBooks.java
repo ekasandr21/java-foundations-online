@@ -57,7 +57,6 @@ public class ListsOfBooks {
 
         //Проеврка наличие элемента
         System.out.println("books20.contains(remBook) = " + books20List.contains(remBook));
-
         //вывод списка
         System.out.println(books20List);
 
@@ -170,18 +169,18 @@ public class ListsOfBooks {
         // ДО МЕНЯ НЕ ДОШЛО КАК СДЕЛАТЬ ЛУЧШЕ С ПЕРВОЙ БУКВОЙ ИМЕНИ
 
         System.out.println("Вывод мужчин подходящих для службы");
-        /*for (Person elemPerson : personList) {
-            if (elemPerson.getName().charAt(0) && elemPerson.getAge() > 18 &&
-                    elemPerson.getAge() < 27 && elemPerson.isMale() == true){
+        for (Person elemPerson : personList) {
+            if (elemPerson.getName().charAt(0) == 'Н' && elemPerson.getAge() > 18 &&
+                    elemPerson.getAge() < 27 && elemPerson.isMale()) {
                 System.out.println(elemPerson + " ");
             }
-        }*/
+        }
         System.out.println();
         //NEED HELP!!!
 
         //Найти средний  возраст женщин
         int ageAllWomen = 0;
-        int ageWomanCount= 0;
+        int ageWomanCount = 0;
         System.out.println("Средний возраст женщин");
         for (Person elemPerson : personList) {
             if (!elemPerson.isMale()) {
@@ -189,6 +188,6 @@ public class ListsOfBooks {
                 ageWomanCount++;
             }
         }
-        System.out.println("Средний возраст женщин: " + ageAllWomen/ageWomanCount);
+        System.out.println("Средний возраст женщин: " + ageAllWomen / ageWomanCount);
     }
 }
